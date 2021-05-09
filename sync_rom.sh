@@ -2,6 +2,10 @@
 
 set -exv
 
+rm -rf /tmp/rom
+mkdir -p /tmp/rom
+cd /tmp/rom
+
 # sync rom
 repo init -u https://github.com/Project-Fluid/manifest.git --depth=1 -b fluid-11
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
