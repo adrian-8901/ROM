@@ -15,8 +15,8 @@ task:
       memory: 32G # So that we can have ram when needed, 32G highest
     download_ccache_background_script: # To download ccache in background
       - ./download_ccache # Ccache download script
-    #sync_script: # To sync source
-     # - ./sync # Source sync script
+    sync_script: # To sync source
+      - ./sync # Source sync script
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
       - ./monitor # Monitor script
     build_script: # Actual build script foreground
